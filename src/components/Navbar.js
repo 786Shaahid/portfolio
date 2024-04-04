@@ -3,6 +3,7 @@ import {
   AppBar,
   Button,
   IconButton,
+  
   Stack,
   Typography,
   
@@ -10,8 +11,9 @@ import {
 import React from "react";
 import { darkTheme } from "../utility/Themes";
 import { DiCssdeck } from "react-icons/di";
-import { FlexComponent, Navlink } from "../utility/styleComponent";
+import { AnchorTag, FlexComponent, Navlink } from "../utility/styleComponent";
 import { red } from "@mui/material/colors";
+import { Link } from "react-scroll";
 
 function Navbar() {
 
@@ -47,11 +49,11 @@ function Navbar() {
             }}
             flex={6}
           >
-            <Navlink>About</Navlink>
-            <Navlink>Skills</Navlink>
-            <Navlink>Projects</Navlink>
-            <Navlink>Education</Navlink>
-            <Navlink>Contact</Navlink>
+            <Navlink><Link duration={500}  smooth={true} to="About">About</Link></Navlink>
+            <Navlink><Link duration={500} smooth={true} to="Skill">Skills</Link></Navlink>
+            <Navlink><Link duration={500} smooth={true} to="Project" >Projects</Link></Navlink>
+            <Navlink><Link duration={500} smooth={true} to='Education'  >Education</Link></Navlink>
+            <Navlink><Link duration={500} smooth={true} to='Contact' >Contact</Link></Navlink>
           </Stack>
 
           <Stack flex={2} justifyContent={"center"} alignItems={"center"}>
@@ -59,7 +61,6 @@ function Navbar() {
               variant="outlined"
               startIcon={<GitHub />}
               sx={(theme) => ({
-                color: theme.palette.text,
                 textTransform: "capitalize",
                 display: { xs: "none", sm: "flex" },
                 borderRadius: "20px",
@@ -73,7 +74,10 @@ function Navbar() {
                 }
               })}
             >
+             <AnchorTag href="https://github.com/786Shaahid" target="_blank" sx={theme=>({color:darkTheme.button})}>
+
               Github Profile
+             </AnchorTag>
             </Button>
           </Stack>
         </Stack>

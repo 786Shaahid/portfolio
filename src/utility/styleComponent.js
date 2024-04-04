@@ -1,10 +1,9 @@
 import { Box, Button, Card, Stack, styled } from "@mui/material";
 import { darkTheme, lightTheme } from "./Themes"
-export const FlexComponent = styled(Box)(({ theme, justify, padding,width,height }) => ({
+export const FlexComponent = styled(Box)(({ theme, padding,width,height }) => ({
     width: width? width:"",
     height:height?height:'',
     display: "flex",
-    justifyContent: justify ? justify : "space-around",
     alignItems: "center",
     padding: padding ? padding : "5px",
   }));
@@ -52,3 +51,12 @@ export const FlexComponent = styled(Box)(({ theme, justify, padding,width,height
     outline: "2px solid blue",
     wordWrap: "normal",
   }));
+
+export  const CardConatiner = styled(Box)(({ theme }) => ({
+    backgroundColor: "",
+    padding: "20px",
+  }));
+export const AnchorTag=styled('a')(({theme})=>({
+  color:theme.palette.text.secondary,
+         textDecoration:'none'
+ }))

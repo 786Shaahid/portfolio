@@ -1,6 +1,6 @@
 import { Avatar, Box, Button, Stack, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
-import { FlexComponent } from "../utility/styleComponent";
+import { AnchorTag, FlexComponent } from "../utility/styleComponent";
 import Typewriter from "typewriter-effect";
 import { darkTheme} from "../utility/Themes";
 import myPic from "../image/myPic.jpg";
@@ -113,7 +113,7 @@ function AboutSection() {
                 transitionBehavior:'smooth'
               }
       })}>
- Check Resume
+ <AnchorTag href="https://ninjasfiles.s3.amazonaws.com/full-stack%20(2).pdf_2ce6db872ab91637c289fc7cb55e5353/full-stack%20(2).pdf" target="_blank"> Check Resume</AnchorTag>  
 </Button>
          </Stack>
       </Stack>

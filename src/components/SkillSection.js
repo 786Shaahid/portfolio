@@ -1,12 +1,13 @@
 import React from "react";
-import { CustomButton, FlexComponent, GroupButton, ItemBox } from "../utility/styleComponent";
 import {
-  Box,
-  Grid,
-  Typography,
-} from "@mui/material";
+  CustomButton,
+  FlexComponent,
+  GroupButton,
+  ItemBox,
+} from "../utility/styleComponent";
+import { Box, Grid, Typography } from "@mui/material";
 import { Title } from "../utility/reusableComponent";
-import { darkTheme, lightTheme } from "../utility/Themes";
+import { darkTheme } from "../utility/Themes";
 import { FaReact } from "react-icons/fa6";
 import { SiRedux } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
@@ -26,26 +27,25 @@ import { SiNetlify } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
 
 function SkillSection() {
-
   return (
     <>
-      <FlexComponent bgcolor={darkTheme.bg} flexDirection={"column"}>
+      <FlexComponent bgcolor={darkTheme.bg} flexDirection={"column"} id="Skill">
         <FlexComponent
           m={"1rem"}
           alignItemBoxs={"center"}
           flexDirection={"column"}
-        >
+          
+       >
           <Title
             title={"Skills"}
             titleDes={
-              "this is very nice project s.khkfds lklshjfhsdhf sddhfkjasdhfjhadsf sadfsadfhjsdfhsf o;asdjfosdhjfodf odshjfhsdifusdf"
+              "Technical Proficiencies and Abilities"
             }
           />
         </FlexComponent>
         <Box sx={(theme) => ({ flexGrow: 1 })} width={"70%"}>
           <Grid container spacing={3}>
-
-            <Grid item xs={12} sm={6} >
+            <Grid item xs={12} sm={6}>
               <ItemBox>
                 <Typography variant="h6" m={"1rem"}>
                   Frontend
@@ -85,66 +85,45 @@ function SkillSection() {
                   <CustomButton startIcon={<SiMongodb />}>MongoDB</CustomButton>
                 </GroupButton>
                 <GroupButton direction={"row"} spacing={4}>
-                  <CustomButton >Jsonweb Token</CustomButton>
-                  <CustomButton >Social Authentication</CustomButton>
+                  <CustomButton>Jsonweb Token</CustomButton>
+                  <CustomButton>Social Authentication</CustomButton>
                 </GroupButton>
-
               </ItemBox>
             </Grid>
             <Grid item xs={12} md={6}>
               <ItemBox>
-                <Typography
-                  variant="h6"
-                  m={"1rem"}
-
-                >
+                <Typography variant="h6" m={"1rem"}>
                   Controls
                 </Typography>
                 <GroupButton direction={"row"} spacing={4}>
-                  <CustomButton startIcon={<TbBrandVscode />
-                  }>VS code </CustomButton>
-                  <CustomButton startIcon={<SiNetlify />
-                  }>Netlify</CustomButton>
-
+                  <CustomButton startIcon={<TbBrandVscode />}>
+                    VS code{" "}
+                  </CustomButton>
+                  <CustomButton startIcon={<SiNetlify />}>Netlify</CustomButton>
                 </GroupButton>
                 <GroupButton direction={"row"} spacing={4}>
-                  <CustomButton startIcon={<SiRender />
-                  }>Render</CustomButton>
+                  <CustomButton startIcon={<SiRender />}>Render</CustomButton>
                 </GroupButton>
               </ItemBox>
             </Grid>
             <Grid item xs={12} md={6}>
               <ItemBox>
-                <Typography
-                  variant="h6"
-                  m={"1rem"}
-
-                >
+                <Typography variant="h6" m={"1rem"}>
                   Others
                 </Typography>
                 <GroupButton direction={"row"} spacing={4}>
-                  <CustomButton startIcon={<FaGithub />
-                  }>Git</CustomButton>
-                  <CustomButton startIcon={<FaGitAlt />
-                  }>Github</CustomButton>
-                  <CustomButton startIcon={<SiPostman />
-                  }>
+                  <CustomButton startIcon={<FaGithub />}>Git</CustomButton>
+                  <CustomButton startIcon={<FaGitAlt />}>Github</CustomButton>
+                  <CustomButton startIcon={<SiPostman />}>Postman</CustomButton>
+                </GroupButton>
+                <GroupButton direction={"row"} spacing={4}>
+                  <CustomButton startIcon={<SiSocketdotio />}>
                     Postman
                   </CustomButton>
                 </GroupButton>
-                <GroupButton direction={"row"} spacing={4}>
-                  <CustomButton startIcon={<SiSocketdotio />
-
-                  }>
-                    Postman
-                  </CustomButton>
-
-                </GroupButton>
-                <GroupButton direction={"row"} spacing={4}>
-                </GroupButton>
+                <GroupButton direction={"row"} spacing={4}></GroupButton>
               </ItemBox>
             </Grid>
-
           </Grid>
         </Box>
       </FlexComponent>
