@@ -26,7 +26,7 @@ function Navbar() {
         borderRight:`1px solid ${red[200]}` 
       })}
     >
-      <FlexComponent justify="center" padding={"0.5rem"}>
+      <FlexComponent justifyContent={'center'} padding={"0.5rem"}>
         <Stack direction={"row"} spacing={12}>
           <Stack flex={2} sx={{justifyContent:'center',alignItems:"center",cursor:"default"}}>
             <FlexComponent sx={{ justifyContent: { sm: "end", xs: "start" } }}>

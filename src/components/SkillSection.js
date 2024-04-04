@@ -32,7 +32,6 @@ function SkillSection() {
       <FlexComponent bgcolor={darkTheme.bg} flexDirection={"column"} id="Skill">
         <FlexComponent
           m={"1rem"}
-          alignItemBoxs={"center"}
           flexDirection={"column"}
           
        >

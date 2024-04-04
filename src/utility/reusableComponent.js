@@ -25,8 +25,8 @@ export const Title=({title,titleDes})=>{
     )
 }
 
-export const TimeLineItem=(item)=>{
- console.log(item);
+export const TimeLineItem=({item})=>{
+//  console.log(item.id);
 return (
     <>
       {/* <Timeline > */}

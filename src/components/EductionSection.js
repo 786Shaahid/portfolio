@@ -14,15 +14,11 @@ function EductionSection() {
      id='Education' >
        <FlexComponent
           m={"1rem"}
-          alignItemBoxs={"center"}
           flexDirection={"column"}
         >
           <Title
             title={"Education"}
-            titleDes={
-              "My education has been a journey of self-discovery and growth.My educational details are as follows."
-            }
-          />
+            titleDes={"My education has been a journey of self-discovery and growth.My educational details are as follows."} />
         </FlexComponent>
       
     <Timeline>

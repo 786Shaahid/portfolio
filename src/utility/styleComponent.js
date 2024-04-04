@@ -1,11 +1,10 @@
-import { Box, Button, Card, Stack, styled } from "@mui/material";
+import { Box, Button, Card, Stack, TextField, styled } from "@mui/material";
 import { darkTheme, lightTheme } from "./Themes"
 export const FlexComponent = styled(Box)(({ theme, padding,width,height }) => ({
     width: width? width:"",
     height:height?height:'',
     display: "flex",
     alignItems: "center",
-    padding: padding ? padding : "5px",
   }));
 
  export const Navlink = styled(Box)(({ theme }) => ({
@@ -59,4 +58,17 @@ export  const CardConatiner = styled(Box)(({ theme }) => ({
 export const AnchorTag=styled('a')(({theme})=>({
   color:theme.palette.text.secondary,
          textDecoration:'none'
- }))
+ }));
+
+ export const CustomTextField=styled(TextField)(({theme})=>({
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: lightTheme.bgLight, 
+       borderWidth:'2px',
+       fontSize:'1rem',
+       fontWeight: 'bold', 
+       color:lightTheme.bgLight
+    },
+    
+  }
+}))

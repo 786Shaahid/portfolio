@@ -11,13 +11,13 @@ import { darkTheme } from "../utility/Themes";
 
 export default function EductionCard({education}) {
   
-const  {img,school,date, grade, desc,degree}=education.item
+const  {img,school,date, grade, desc,degree}=education
   return (
     <>
       <Card
         sx={(theme) => ({
           width: "33rem",
-          height: "15rem",
+          // height: "1rem",
           border: ` 2px solid ${darkTheme.button} `,
           borderRadius: "10px",
           bgcolor: 'black',
@@ -51,13 +51,13 @@ const  {img,school,date, grade, desc,degree}=education.item
                   {date}
                 </Typography>
                 <Typography variant="caption" >
-                CGAP- {grade}
+                 {grade}
                 </Typography>
               </FlexComponent>
             </>
           }
         />
-        <CardContent>
+        <CardContent sx={{mt:'-2rem'}}>
           <Typography variant="body2" color="text.secondary">
             {desc}
           </Typography>

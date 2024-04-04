@@ -35,7 +35,6 @@ function Project() {
      id="Project" >
         <FlexComponent
           m={"1rem"}
-          alignItemBoxs={"center"}
           flexDirection={"column"}
         >
           <Title
