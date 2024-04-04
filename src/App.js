@@ -6,7 +6,6 @@ import SkillSection from './components/SkillSection';
 import Project from './components/Project';
 import EductionSection from './components/EductionSection';
 import ContactSection from './components/ContactSection';
-import { ArrowUpwardSharp } from '@mui/icons-material';
 
 function App() {
   return (
@@ -21,17 +20,7 @@ function App() {
   <Project/>
   <EductionSection/>
   <ContactSection/>
-  {/* <Box sx={{
-           width:'100px',
-           height:'100px',
-           bgcolor:'red',
-           position:'relative',
-           zIndex:1,
-           right:'10px',
-           bottom:'0px'
-
-
-       }}><ArrowUpwardSharp/></Box> */}
+  
 
    </Stack>
 <Stack  flex={1} sx={{display:{xs:"none",sm:'block'}}}></Stack>
