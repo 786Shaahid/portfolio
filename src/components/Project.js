@@ -32,7 +32,7 @@ function Project() {
       <FlexComponent
         sx={(theme) => ({ backgroundColor: theme.palette.background.default })}
         flexDirection={"column"}
-     id="Project" >
+     id="Projects" >
         <FlexComponent
           m={"1rem"}
           flexDirection={"column"}

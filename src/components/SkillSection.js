@@ -108,16 +108,16 @@ function SkillSection() {
             <Grid item xs={12} md={6}>
               <ItemBox>
                 <Typography variant="h6" m={"1rem"}>
-                  Others
+                  Version Controls
                 </Typography>
                 <GroupButton direction={"row"} spacing={4}>
                   <CustomButton startIcon={<FaGithub />}>Git</CustomButton>
                   <CustomButton startIcon={<FaGitAlt />}>Github</CustomButton>
-                  <CustomButton startIcon={<SiPostman />}>Postman</CustomButton>
+                  <CustomButton startIcon={<SiPostman />}>Api testing:Postman</CustomButton>
                 </GroupButton>
                 <GroupButton direction={"row"} spacing={4}>
                   <CustomButton startIcon={<SiSocketdotio />}>
-                    Postman
+                    Socket.IO
                   </CustomButton>
                 </GroupButton>
                 <GroupButton direction={"row"} spacing={4}></GroupButton>

@@ -23,7 +23,7 @@ function EductionSection() {
       
     <Timeline>
    {
-    education.map((eduItem)=>(<TimeLineItem item={eduItem} />))
+    education.map((eduItem,index)=>(<TimeLineItem item={eduItem} key={index} />))
    } 
     </Timeline>
       </FlexComponent>

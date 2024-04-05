@@ -6,15 +6,24 @@ import SkillSection from './components/SkillSection';
 import Project from './components/Project';
 import EductionSection from './components/EductionSection';
 import ContactSection from './components/ContactSection';
-
+import {useState} from 'react';
+import DrawerComponent from './components/Drawer';
 function App() {
+  const [open, setOpen]=useState(false);
+  console.log(open);
+  const toggledrawer=(value)=>()=>{
+    setOpen(value);
+    console.log("sfkljfkl");
+  }
+
   return (
     <>
     <ThemeProvider theme={theme} >
     <CssBaseline/>
+    <DrawerComponent open={open} toggledrawer={toggledrawer}  />
     <Box display="flex" sx={{bgcolor:'black'}}>
 <Stack  flex={7} sx={{position:'relative'}}>
-  <Navbar/>
+  <Navbar toggledrawer={toggledrawer}/>
   <AboutSection/>
   <SkillSection/>
   <Project/>

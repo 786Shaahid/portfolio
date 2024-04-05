@@ -15,7 +15,7 @@ import { AnchorTag, FlexComponent, Navlink } from "../utility/styleComponent";
 import { red } from "@mui/material/colors";
 import { Link } from "react-scroll";
 
-function Navbar() {
+function Navbar({toggledrawer}) {
 
   return (
     <AppBar
@@ -93,7 +93,7 @@ function Navbar() {
             },
           }}
         >
-          <IconButton>
+          <IconButton onClick={toggledrawer(true)} >
             <MenuOpen sx={{ fontSize: 40, color: "white" }} />
           </IconButton>
         </Stack>

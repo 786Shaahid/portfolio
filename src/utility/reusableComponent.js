@@ -10,7 +10,7 @@ import TimelineDot from '@mui/lab/TimelineDot';
 export const Title=({title,titleDes})=>{
     return(
         <>
-        <Typography variant="h4" fontWeight={'600'} color={darkTheme.text_primary} mt={'2.3rem'}>{title}</Typography>
+        <Typography variant="h4" fontWeight={'600'} color={darkTheme.text_primary} mt={{sx:'5rem',sm:"2.3rem"}}>{title}</Typography>
         <Stack  width={'80%'} textAlign={'center'} m={'0.8rem'}  >
         <Box  sx={theme=>({
                         fontSize:'1rem',
