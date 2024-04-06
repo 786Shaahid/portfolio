@@ -35,12 +35,15 @@ export const FlexComponent = styled(Box)(({ theme, padding,width,height }) => ({
 
   export const GroupButton = styled(Stack)(({ theme }) => ({
     color: darkTheme.text_primary,
-    padding: "10px",
+    padding: "10px ",
     justifyContent: "center",
     alignItems: "center",
+   
   }));
 
   export const CustomButton = styled(Button)(({ theme }) => ({
+    // minWidth:'30%',
+    
     border: `2px solid ${darkTheme.button}`,
     padding: "0.5rem 1rem",
     color: theme.palette.text.primary,
@@ -49,6 +52,7 @@ export const FlexComponent = styled(Box)(({ theme, padding,width,height }) => ({
     borderRadius: "10px",
     outline: "2px solid blue",
     wordWrap: "normal",
+    
   }));
 
 export  const CardConatiner = styled(Box)(({ theme }) => ({

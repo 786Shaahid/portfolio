@@ -10,10 +10,8 @@ import {useState} from 'react';
 import DrawerComponent from './components/Drawer';
 function App() {
   const [open, setOpen]=useState(false);
-  console.log(open);
   const toggledrawer=(value)=>()=>{
     setOpen(value);
-    console.log("sfkljfkl");
   }
 
   return (

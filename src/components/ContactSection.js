@@ -42,7 +42,6 @@ function ContactSection() {
           backgroundColor: theme.palette.background.default,
           [theme.breakpoints.down('sm')]:{
             width:"25.8rem",
-            // height:'85rem',
      }
         })}
         flexDirection={"column"}

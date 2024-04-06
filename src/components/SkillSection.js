@@ -37,12 +37,6 @@ function SkillSection() {
         <FlexComponent
           m={"1rem"}
           flexDirection={"column"}
-          sx={theme=>({
-      //       [theme.breakpoints.down('xs')]:{
-      //         width:"50%",
-      //         m:'10px'
-      //  }
-          })}
        >
           <Title
             title={"Skills"}
@@ -62,21 +56,21 @@ function SkillSection() {
                 <Typography variant="h6" m={"1rem"}>
                   Frontend
                 </Typography>
-                <GroupButton direction={"row"} spacing={4}>
+                <GroupButton direction={"row"} spacing={2}>
                   <CustomButton startIcon={<FaReact />}>React Js </CustomButton>
                   <CustomButton startIcon={<SiRedux />}>Redux</CustomButton>
                   <CustomButton startIcon={<SiRedux />}>
                     Redux Toolkit
                   </CustomButton>
                 </GroupButton>
-                <GroupButton direction={"row"} spacing={4}>
+                <GroupButton direction={"row"} spacing={2}>
                   <CustomButton startIcon={<FaHtml5 />}>HTML</CustomButton>
                   <CustomButton startIcon={<BiLogoCss3 />}>CSS</CustomButton>
                   <CustomButton startIcon={<SiJavascript />}>
                     Javascript{" "}
                   </CustomButton>
                 </GroupButton>
-                <GroupButton direction={"row"} spacing={4}>
+                <GroupButton direction={"row"} spacing={2}>
                   <CustomButton startIcon={<FaBootstrap />}>
                     Bootstrap
                   </CustomButton>
@@ -89,14 +83,14 @@ function SkillSection() {
                 <Typography variant="h6" m={"1rem"}>
                   Backend
                 </Typography>
-                <GroupButton direction={"row"} spacing={4}>
+                <GroupButton direction={"row"} spacing={2}>
                   <CustomButton startIcon={<DiNodejs />}>Node Js</CustomButton>
                   <CustomButton startIcon={<SiExpress />}>
                     Express Js
                   </CustomButton>
                   <CustomButton startIcon={<SiMongodb />}>MongoDB</CustomButton>
                 </GroupButton>
-                <GroupButton direction={"row"} spacing={4}>
+                <GroupButton direction={"row"} spacing={2}>
                   <CustomButton>Jsonweb Token</CustomButton>
                   <CustomButton>Social Authentication</CustomButton>
                 </GroupButton>
@@ -107,13 +101,13 @@ function SkillSection() {
                 <Typography variant="h6" m={"1rem"}>
                   Controls
                 </Typography>
-                <GroupButton direction={"row"} spacing={4}>
+                <GroupButton direction={"row"} spacing={2}>
                   <CustomButton startIcon={<TbBrandVscode />}>
                     VS code{" "}
                   </CustomButton>
                   <CustomButton startIcon={<SiNetlify />}>Netlify</CustomButton>
                 </GroupButton>
-                <GroupButton direction={"row"} spacing={4}>
+                <GroupButton direction={"row"} spacing={2}>
                   <CustomButton startIcon={<SiRender />}>Render</CustomButton>
                 </GroupButton>
               </ItemBox>
@@ -123,17 +117,17 @@ function SkillSection() {
                 <Typography variant="h6" m={"1rem"}>
                   Version Controls
                 </Typography>
-                <GroupButton direction={"row"} spacing={4}>
+                <GroupButton direction={"row"} spacing={2}>
                   <CustomButton startIcon={<FaGithub />}>Git</CustomButton>
                   <CustomButton startIcon={<FaGitAlt />}>Github</CustomButton>
                   <CustomButton startIcon={<SiPostman />}>Api testing:Postman</CustomButton>
                 </GroupButton>
-                <GroupButton direction={"row"} spacing={4}>
+                <GroupButton direction={"row"} spacing={2}>
                   <CustomButton startIcon={<SiSocketdotio />}>
                     Socket.IO
                   </CustomButton>
                 </GroupButton>
-                <GroupButton direction={"row"} spacing={4}></GroupButton>
+                <GroupButton direction={"row"} spacing={2}></GroupButton>
               </ItemBox>
             </Grid>
           </Grid>
