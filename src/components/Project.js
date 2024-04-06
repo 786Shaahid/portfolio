@@ -7,13 +7,7 @@ import {
   GroupButton,
 } from "../utility/styleComponent";
 import { Title } from "../utility/reusableComponent";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import Connectify from "../image/Connectify.jpg";
 import portfollio from "../image/portfolio.jpg";
 import contactList from "../image/contactList.jpg";
@@ -25,22 +19,19 @@ import { GitHub, OnlinePrediction } from "@mui/icons-material";
 import { darkTheme } from "../utility/Themes";
 
 function Project() {
- 
-
   return (
     <>
       <FlexComponent
-        sx={(theme) => ({ backgroundColor: theme.palette.background.default,
-          [theme.breakpoints.down('sm')]:{
-            width:"25.8rem",
-     }
+        sx={(theme) => ({
+          backgroundColor: theme.palette.background.default,
+          [theme.breakpoints.down("sm")]: {
+            width: "25.8rem",
+          },
         })}
         flexDirection={"column"}
-        id="Projects" >
-        <FlexComponent
-          m={"1rem"}
-          flexDirection={"column"}
-        >
+        id="Projects"
+      >
+        <FlexComponent m={"1rem"} flexDirection={"column"}>
           <Title
             title={"Projects"}
             titleDes={
@@ -48,9 +39,15 @@ function Project() {
             }
           />
         </FlexComponent>
-        <CardConatiner sx={(theme) => ({ flexGrow: 1 , [theme.breakpoints.down('sm')]:{
-              width:"93%",
-       }})} width={"70%"}>
+        <CardConatiner
+          sx={(theme) => ({
+            flexGrow: 1,
+            [theme.breakpoints.down("sm")]: {
+              width: "93%",
+            },
+          })}
+          width={"70%"}
+        >
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
               <Card
@@ -107,7 +104,7 @@ function Project() {
                     Connectify Website
                   </Typography>
                   <Typography variant="body2" color={darkTheme.text_secondary}>
-                    Built Connectify using MERN for AnchorTag user-friendly social
+                    Built Connectify using MERN for a user-friendly social
                     platform. Enhanced features for seamless connections and
                     real-time communication. Empowered meaningful interactions.
                   </Typography>
@@ -117,11 +114,21 @@ function Project() {
                     variant="outlined"
                     startIcon={<OnlinePrediction />}
                   >
-                   <AnchorTag href="https://connectify-website.netlify.app" target="_blank"> Go Live </AnchorTag>  
+                    <AnchorTag
+                      href="https://connectify-website.netlify.app"
+                      target="_blank"
+                    >
+                      {" "}
+                      Go Live{" "}
+                    </AnchorTag>
                   </CustomButton>
                   <CustomButton variant="outlined" startIcon={<GitHub />}>
-                    <AnchorTag rel="noopener" href="https://github.com/786Shaahid/authFrontend" target="_blank">
-                    GitHub
+                    <AnchorTag
+                      rel="noopener"
+                      href="https://github.com/786Shaahid/authFrontend"
+                      target="_blank"
+                    >
+                      GitHub
                     </AnchorTag>
                   </CustomButton>
                 </GroupButton>
@@ -151,7 +158,7 @@ function Project() {
                   </CustomButton>
                   <CustomButton sx={{ m: "5px  5px 2px", p: "3px" }}>
                     {" "}
-                    Firebase
+                    Material-UI
                   </CustomButton>
                 </CardConatiner>
 
@@ -160,11 +167,13 @@ function Project() {
                     My Portfolio
                   </Typography>
                   <Typography variant="body2" color={darkTheme.text_secondary}>
-                    I developed AnchorTag personal portfolio using React.js and Firebase
-                    to showcase my skills and projects.Utilizing Firebase
-                    allowed for seamless hosting and real-time database
-                    functionalities. Firebase streamlined hosting and
-                    demonstrating proficiency in React.js.{" "}
+                    {/* I developed  personal portfolio 
+                    to showcase my skills and projects.  */}
+                    I developed a  portfolio  to exhibit
+                    my expertise and showcase various projects I've undertaken,
+                    all based on MERN stack technology. Feel free to explore and
+                    download my resume, access my GitHub link, and review my
+                    educational background.
                   </Typography>
                 </CardContent>
                 <GroupButton direction={"row"} spacing={3}>
@@ -172,11 +181,18 @@ function Project() {
                     variant="outlined"
                     startIcon={<OnlinePrediction />}
                   >
-                   <AnchorTag href=" "  target="_blank"> Go Live </AnchorTag>  
+                    <AnchorTag href=" " target="_blank">
+                      {" "}
+                      Go Live{" "}
+                    </AnchorTag>
                   </CustomButton>
                   <CustomButton variant="outlined" startIcon={<GitHub />}>
-                    <AnchorTag  rel="noopener"  href="https://github.com/786Shaahid/portfolio" target="_blank">
-                    GitHub
+                    <AnchorTag
+                      rel="noopener"
+                      href="https://github.com/786Shaahid/portfolio"
+                      target="_blank"
+                    >
+                      GitHub
                     </AnchorTag>
                   </CustomButton>
                 </GroupButton>
@@ -241,11 +257,21 @@ function Project() {
                     variant="outlined"
                     startIcon={<OnlinePrediction />}
                   >
-                   <AnchorTag href=" https://placement-cell-u2c4.onrender.com" target="_blank"> Go Live </AnchorTag>  
+                    <AnchorTag
+                      href=" https://placement-cell-u2c4.onrender.com"
+                      target="_blank"
+                    >
+                      {" "}
+                      Go Live{" "}
+                    </AnchorTag>
                   </CustomButton>
                   <CustomButton variant="outlined" startIcon={<GitHub />}>
-                    <AnchorTag rel="noopener" href="https://github.com/786Shaahid/placement-cell" target="_blank">
-                    GitHub
+                    <AnchorTag
+                      rel="noopener"
+                      href="https://github.com/786Shaahid/placement-cell"
+                      target="_blank"
+                    >
+                      GitHub
                     </AnchorTag>
                   </CustomButton>
                 </GroupButton>
@@ -300,9 +326,10 @@ function Project() {
                     Authentication & Forget Password
                   </Typography>
                   <Typography variant="body2" color={darkTheme.text_secondary}>
-                    Developing AnchorTag Node.js app with Google authentication and
-                    Nodemailer for password recovery. It ensures secure login
-                    and simplifies password reset, prioritizing user security{" "}
+                    Developing  Node.js app with Google authentication
+                    and Nodemailer for password recovery. It ensures secure
+                    login and simplifies password reset, prioritizing user
+                    security .
                   </Typography>
                 </CardContent>
                 <GroupButton direction={"row"} spacing={3}>
@@ -310,11 +337,22 @@ function Project() {
                     variant="outlined"
                     startIcon={<OnlinePrediction />}
                   >
-                   <AnchorTag rel="noopener" href="https://forget-password-zbxo.onrender.com " target="_blank"> Go Live </AnchorTag>  
+                    <AnchorTag
+                      rel="noopener"
+                      href="https://forget-password-zbxo.onrender.com "
+                      target="_blank"
+                    >
+                      {" "}
+                      Go Live{" "}
+                    </AnchorTag>
                   </CustomButton>
                   <CustomButton variant="outlined" startIcon={<GitHub />}>
-                    <AnchorTag rel="noopener" href="https://github.com/786Shaahid/authenticationForgetpassword" target="_blank">
-                    GitHub
+                    <AnchorTag
+                      rel="noopener"
+                      href="https://github.com/786Shaahid/authenticationForgetpassword"
+                      target="_blank"
+                    >
+                      GitHub
                     </AnchorTag>
                   </CustomButton>
                 </GroupButton>
@@ -361,7 +399,7 @@ function Project() {
                   </Typography>
                   <Typography variant="body2" color={darkTheme.text_secondary}>
                     Discover and explore meals effortlessly with the
-                    'Find/Search Meal' project.  It empowers users to dynamically
+                    'Find/Search Meal' project. It empowers users to dynamically
                     search, filter, and access detailed recipe information.
                   </Typography>
                 </CardContent>
@@ -370,11 +408,22 @@ function Project() {
                     variant="outlined"
                     startIcon={<OnlinePrediction />}
                   >
-                   <AnchorTag rel="noopener" href=" https://786shaahid.github.io/favouritemealsapp/index.html" target="_blank"> Go Live </AnchorTag>  
+                    <AnchorTag
+                      rel="noopener"
+                      href=" https://786shaahid.github.io/favouritemealsapp/index.html"
+                      target="_blank"
+                    >
+                      {" "}
+                      Go Live{" "}
+                    </AnchorTag>
                   </CustomButton>
                   <CustomButton variant="outlined" startIcon={<GitHub />}>
-                    <AnchorTag rel="noopener" href="https://github.com/786Shaahid/favouritemealsapp" target="_blank">
-                    GitHub
+                    <AnchorTag
+                      rel="noopener"
+                      href="https://github.com/786Shaahid/favouritemealsapp"
+                      target="_blank"
+                    >
+                      GitHub
                     </AnchorTag>
                   </CustomButton>
                 </GroupButton>
@@ -397,7 +446,7 @@ function Project() {
                   sx={{ borderRadius: "10px" }}
                 />
                 <CardConatiner flexWrap={"wrap"} mb={"-20px"}>
-                <CustomButton sx={{ m: "5px  5px 2px", p: "3px" }}>
+                  <CustomButton sx={{ m: "5px  5px 2px", p: "3px" }}>
                     {" "}
                     Javascript
                   </CustomButton>
@@ -413,7 +462,6 @@ function Project() {
                     {" "}
                     Local Storage
                   </CustomButton>
-                 
                 </CardConatiner>
 
                 <CardContent>
@@ -421,7 +469,9 @@ function Project() {
                     My Alarm
                   </Typography>
                   <Typography variant="body2" color={darkTheme.text_secondary}>
-                  Allowing users to set and manage alarms seamlessly. It demonstrates my JavaScript skills and commitment to practical applications.
+                    Allowing users to set and manage alarms seamlessly. It
+                    demonstrates my JavaScript skills and commitment to
+                    practical applications.
                   </Typography>
                 </CardContent>
                 <GroupButton direction={"row"} spacing={3}>
@@ -429,10 +479,23 @@ function Project() {
                     variant="outlined"
                     startIcon={<OnlinePrediction />}
                   >
-                   <AnchorTag rel="noopener" href=" https://786shaahid.github.io/digitalalarm/" target="_blank"> Go Live </AnchorTag>  
+                    <AnchorTag
+                      rel="noopener"
+                      href=" https://786shaahid.github.io/digitalalarm/"
+                      target="_blank"
+                    >
+                      {" "}
+                      Go Live{" "}
+                    </AnchorTag>
                   </CustomButton>
                   <CustomButton variant="outlined" startIcon={<GitHub />}>
-                    <AnchorTag rel="noopener" href="https://github.com/786Shaahid/digitalalarm" target="_blank">GitHub</AnchorTag>
+                    <AnchorTag
+                      rel="noopener"
+                      href="https://github.com/786Shaahid/digitalalarm"
+                      target="_blank"
+                    >
+                      GitHub
+                    </AnchorTag>
                   </CustomButton>
                 </GroupButton>
               </Card>
@@ -464,7 +527,6 @@ function Project() {
                   </CustomButton>
                   <CustomButton sx={{ m: "5px  5px 2px", p: "3px" }}>
                     {" "}
-                    
                     Rest APIs
                   </CustomButton>
                 </CardConatiner>
@@ -474,7 +536,9 @@ function Project() {
                     Contact-List
                   </Typography>
                   <Typography variant="body2" color={darkTheme.text_secondary}>
-                  Users can seamlessly add, update, or delete contacts within the list. Utilizing props for efficient data transfer between components.
+                    Users can seamlessly add, update, or delete contacts within
+                    the list. Utilizing props for efficient data transfer
+                    between components.
                   </Typography>
                 </CardContent>
                 <GroupButton direction={"row"} spacing={3}>
@@ -482,10 +546,23 @@ function Project() {
                     variant="outlined"
                     startIcon={<OnlinePrediction />}
                   >
-                   <AnchorTag rel="noopener" href="https://786contactlist.netlify.app/" target="_blank"> Go Live </AnchorTag>  
+                    <AnchorTag
+                      rel="noopener"
+                      href="https://786contactlist.netlify.app/"
+                      target="_blank"
+                    >
+                      {" "}
+                      Go Live{" "}
+                    </AnchorTag>
                   </CustomButton>
                   <CustomButton variant="outlined" startIcon={<GitHub />}>
-                    <AnchorTag rel="noopener" href="https://github.com/786Shaahid/contact-lists" target="_blank">GitHub</AnchorTag>
+                    <AnchorTag
+                      rel="noopener"
+                      href="https://github.com/786Shaahid/contact-lists"
+                      target="_blank"
+                    >
+                      GitHub
+                    </AnchorTag>
                   </CustomButton>
                 </GroupButton>
               </Card>
