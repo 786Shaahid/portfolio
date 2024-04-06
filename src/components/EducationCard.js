@@ -17,12 +17,11 @@ const  {img,school,date, grade, desc,degree}=education
       <Card
         sx={(theme) => ({
           width: "33rem",
-          // height: "1rem",
           border: ` 2px solid ${darkTheme.button} `,
           borderRadius: "10px",
           bgcolor: 'black',
           [theme.breakpoints.down("sm")]: {
-            width: "25rem",
+            width: "20rem",
           },
         })}
       >

@@ -30,9 +30,13 @@ function Project() {
   return (
     <>
       <FlexComponent
-        sx={(theme) => ({ backgroundColor: theme.palette.background.default })}
+        sx={(theme) => ({ backgroundColor: theme.palette.background.default,
+          [theme.breakpoints.down('sm')]:{
+            width:"25.8rem",
+     }
+        })}
         flexDirection={"column"}
-     id="Projects" >
+        id="Projects" >
         <FlexComponent
           m={"1rem"}
           flexDirection={"column"}
@@ -44,7 +48,9 @@ function Project() {
             }
           />
         </FlexComponent>
-        <CardConatiner sx={(theme) => ({ flexGrow: 1 })} width={"70%"}>
+        <CardConatiner sx={(theme) => ({ flexGrow: 1 , [theme.breakpoints.down('sm')]:{
+              width:"93%",
+       }})} width={"70%"}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
               <Card

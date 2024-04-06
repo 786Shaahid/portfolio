@@ -23,7 +23,10 @@ function Navbar({toggledrawer}) {
       sx={(theme) => ({
         backgroundColor: theme.palette.background.default,
         boxShadow:'none',
-        borderRight:`1px solid ${red[200]}` 
+        borderRight:`1px solid ${red[200]}` ,
+        [theme.breakpoints.down('sm')]:{
+          width:'25.8rem',
+        }
       })}
     >
       <FlexComponent justifyContent={'center'} padding={"0.5rem"}>
@@ -51,7 +54,7 @@ function Navbar({toggledrawer}) {
           >
             <Navlink><Link duration={500}  smooth={true} to="About">About</Link></Navlink>
             <Navlink><Link duration={500} smooth={true} to="Skill">Skills</Link></Navlink>
-            <Navlink><Link duration={500} smooth={true} to="Project" >Projects</Link></Navlink>
+            <Navlink><Link duration={500} smooth={true} to="Projects" >Projects</Link></Navlink>
             <Navlink><Link duration={500} smooth={true} to='Education'  >Education</Link></Navlink>
             <Navlink><Link duration={500} smooth={true} to='Contact' >Contact</Link></Navlink>
           </Stack>
@@ -65,7 +68,7 @@ function Navbar({toggledrawer}) {
                 display: { xs: "none", sm: "flex" },
                 borderRadius: "20px",
                 border: `2px solid ${darkTheme.button}`,
-                flexWrap: "nowrap",
+                // flexWrap: "nowrap",
                 width: "11rem",
                 fontWeight: "550",
                 "&:hover":{

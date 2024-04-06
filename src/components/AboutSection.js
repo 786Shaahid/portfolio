@@ -4,6 +4,7 @@ import { AnchorTag, FlexComponent } from "../utility/styleComponent";
 import Typewriter from "typewriter-effect";
 import { darkTheme} from "../utility/Themes";
 import myPic from "../image/myPic.jpg";
+import { Download } from "@mui/icons-material";
 
 function AboutSection() {
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
@@ -17,7 +18,7 @@ function AboutSection() {
           justifyContent: "flex-start",
           alignItems: "flex-start",
           bgcolor: theme.palette.background.default,
-          p: "5em 0",
+          p: "5em 0em",
         })}
      id="About" >
         <FlexComponent>
@@ -31,9 +32,14 @@ function AboutSection() {
             width={"100%"}
             pl={"20%"}
             sx={(theme) => ({
-              [theme.breakpoints.down("md")]: {
-                pl: "10%",
-                mt: "-10%",
+              [theme.breakpoints.down("sm")]: {
+                width:'25rem',
+                pl: "2%",
+                m:'-10%',
+                display:'flex',
+                flexDirection:'column',
+                justifyContent:'center',
+                alignItems:'center'
               },
             })}
           >
@@ -47,7 +53,6 @@ function AboutSection() {
             <Typography
               variant={isXs ? "h5" : isSm ? "h5" : "h4"}
               fontWeight={600}
-              style={{ lineHeight: "" }}
             >
               Shahid Raza
             </Typography>
@@ -67,7 +72,11 @@ function AboutSection() {
                 />
               </span>
             </Typography>
-            <Box sx={theme=>({m:'1rem 0.1rem', fontSize:'20px',lineHeight:'32px',width:'80%',fontFamily:theme.typography.main,color:`${darkTheme.text_secondary}`,opacity:'0.8' })} >
+            <Box sx={theme=>({m:'1rem 0.1rem', fontSize:'20px',lineHeight:'32px',width:'80%',fontFamily:theme.typography.main,color:`${darkTheme.text_secondary}`,opacity:'0.8' ,
+                   [theme.breakpoints.down('xs')]:{
+                    m:"10px 10px"
+             }
+          })} >
               I am a motivated and adaptable individual, always seeking new
               challenges. With a strong passion for learning, I am committed to
               delivering high-quality results with a positive attitude and a
@@ -91,11 +100,18 @@ function AboutSection() {
         </FlexComponent>
       </FlexComponent>
       <Stack sx={theme=>({
+        width:"20%",
+        justifyContent:'space-evenly',
+        margin:'1px 11rem',
+        [theme.breakpoints.down('sm')]:{
+          width:"100%",
           justifyContent:'center',
           alignItems:'center',
-          width:"50%",
-      })}>
-      <Button variant="contained" disableElevation sx={theme=>({
+            ml:'10px',
+          },
+        })}>
+        <AnchorTag href="https://ninjasfiles.s3.amazonaws.com/full-stack%20(2).pdf_2ce6db872ab91637c289fc7cb55e5353/full-stack%20(2).pdf" target="_blank"> 
+      <Button variant="contained" endIcon={<Download/>} disableElevation sx={theme=>({
               width:'18rem',
               height:'3.5rem',
               borderRadius:'15px',
@@ -103,18 +119,19 @@ function AboutSection() {
               fontFamily:theme.typography.button,
               fontSize:'20px',
               textTransform:'capitalize',
-              mt:'20px',
               ml:'5px',
-              [theme.breakpoints.down('md')]:{
-                ml:'10rem',
+              mt:'20px',
+              [theme.breakpoints.down('sm')]:{
+                mt:'2rem',
+                width:"15rem",
               },
               "&:active":{
                 fontSize:'21px',
                 transitionBehavior:'smooth'
               }
       })}>
- <AnchorTag href="https://ninjasfiles.s3.amazonaws.com/full-stack%20(2).pdf_2ce6db872ab91637c289fc7cb55e5353/full-stack%20(2).pdf" target="_blank"> Check Resume</AnchorTag>  
-</Button>
+ Download Resume </Button>
+</AnchorTag>  
          </Stack>
       </Stack>
     </>

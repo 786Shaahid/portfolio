@@ -40,8 +40,10 @@ function ContactSection() {
       <FlexComponent
         sx={(theme) => ({
           backgroundColor: theme.palette.background.default,
-          pb: "20px",
-          // position:"relative"
+          [theme.breakpoints.down('sm')]:{
+            width:"25.8rem",
+            height:'85rem',
+     }
         })}
         flexDirection={"column"}
         id="Contact"
@@ -61,11 +63,24 @@ function ContactSection() {
           direction={{ xs: "column", sm: "row" }}
           width={"70%"}
           p={1}
-          sx={{ border: "2px solid white" }}
+          sx={theme=>({ border: "2px solid white",
+          [theme.breakpoints.down('sm')]:{
+            width:"90%",
+            // p:'20px'
+     }
+        })}
         >
           <Stack flex={3} sx={(theme) => ({})}>
-            <Card sx={{ maxWidth: 345 }}>
-              <CardActionArea sx={{ height: "20rem" }}>
+            <Card sx={theme=>({ maxWidth: 345 ,
+            // flexDirection:'column',
+             [theme.breakpoints.down('sm')]:{
+              width:"100%",
+       }
+            })}>
+              <CardActionArea sx={theme=>({ height: "20rem", 
+              [theme.breakpoints.down('sm')]:{
+            width:"70%",
+     } })}>
                 <List>
                   <ListItem>
                     <ListItemButton>

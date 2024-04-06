@@ -21,8 +21,18 @@ function App() {
     <ThemeProvider theme={theme} >
     <CssBaseline/>
     <DrawerComponent open={open} toggledrawer={toggledrawer}  />
-    <Box display="flex" sx={{bgcolor:'black'}}>
-<Stack  flex={7} sx={{position:'relative'}}>
+    <Box display="flex" sx={theme=>({bgcolor:'black',
+     [theme.breakpoints.down('sm')]:{
+      width:"20rem",
+      // siz
+
+  }
+  })} >
+<Stack  flex={7} sx={theme=>({
+   [theme.breakpoints.down('sm')]:{
+    width:"20rem"
+}
+})}>
   <Navbar toggledrawer={toggledrawer}/>
   <AboutSection/>
   <SkillSection/>

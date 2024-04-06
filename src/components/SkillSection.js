@@ -29,11 +29,20 @@ import { TbBrandVscode } from "react-icons/tb";
 function SkillSection() {
   return (
     <>
-      <FlexComponent bgcolor={darkTheme.bg} flexDirection={"column"} id="Skill">
+      <FlexComponent bgcolor={darkTheme.bg} flexDirection={"column"} id="Skill" sx={theme=>({
+         [theme.breakpoints.down('sm')]:{
+          width:"25.8rem",
+   }
+      })}>
         <FlexComponent
           m={"1rem"}
           flexDirection={"column"}
-          
+          sx={theme=>({
+      //       [theme.breakpoints.down('xs')]:{
+      //         width:"50%",
+      //         m:'10px'
+      //  }
+          })}
        >
           <Title
             title={"Skills"}
@@ -42,7 +51,11 @@ function SkillSection() {
             }
           />
         </FlexComponent>
-        <Box sx={(theme) => ({ flexGrow: 1 })} width={"70%"}>
+        <Box sx={(theme) => ({ flexGrow: 1 ,
+             [theme.breakpoints.down('sm')]:{
+                      width:'90%'
+             }
+        })} width={"70%"}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
               <ItemBox>
