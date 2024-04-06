@@ -7,7 +7,7 @@ export const education = [
     school: " Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal",
     date: "Aug 2016 - Aug 2020",
     grade: "CGPA- 8.39",
-    desc: "I have completed  Bachelor's degree in Mechanical  Engineering from RGPV University, Bhopal with CGPA of 8.71.",
+    desc: "I have completed  Bachelor's degree in Mechanical  Engineering from RGPV University, Bhopal with CGPA of 8.39.",
     degree: "Bachelor of Engineering - BE, Mechanical Engineering",
   },
   {
