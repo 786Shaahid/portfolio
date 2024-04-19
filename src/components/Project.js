@@ -24,9 +24,6 @@ function Project() {
       <FlexComponent
         sx={(theme) => ({
           backgroundColor: theme.palette.background.default,
-          [theme.breakpoints.down("sm")]: {
-            width: "25.8rem",
-          },
         })}
         flexDirection={"column"}
         id="Projects"
@@ -317,7 +314,7 @@ function Project() {
                   </CustomButton>
                   <CustomButton sx={{ m: "5px  5px 2px", p: "3px" }}>
                     {" "}
-                    Social Authentication
+                    OAuth 2
                   </CustomButton>
                 </CardConatiner>
 
@@ -399,7 +396,7 @@ function Project() {
                   </Typography>
                   <Typography variant="body2" color={darkTheme.text_secondary}>
                     Discover and explore meals effortlessly with the
-                    'Find/Search Meal' project. It empowers users to dynamically
+                    Find/Search Meal project. It empowers users to dynamically
                     search, filter, and access detailed recipe information.
                   </Typography>
                 </CardContent>

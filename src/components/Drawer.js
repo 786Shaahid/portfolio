@@ -20,7 +20,7 @@ const iconStyle={
 
 const DrawerItem =[
   {icon:<AccountCircle sx={iconStyle} />, text:'About'},
-  {icon:<Psychology    sx={iconStyle}      />, text:'Skill'},
+  {icon:<Psychology    sx={iconStyle}      />, text:'Skills'},
   {icon:<Dashboard     sx={iconStyle}    />, text:'Projects'},
   {icon:<Book          sx={iconStyle}  />, text:'Education'},
   {icon:<Email         sx={iconStyle}  />, text:'Contact'}

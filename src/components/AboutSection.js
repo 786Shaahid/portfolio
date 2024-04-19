@@ -6,11 +6,13 @@ import { darkTheme} from "../utility/Themes";
 import myPic from "../image/myPic.jpg";
 import { Download } from "@mui/icons-material";
 
-function AboutSection() {
+function AboutSection({aboutData}) {
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
   const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
-
-  return (
+//  const myPic=aboutData.myPic;
+//  console.log(myPic);
+  
+ return (
     <>
       <Stack
         direction={'column'}
@@ -18,7 +20,11 @@ function AboutSection() {
           justifyContent: "flex-start",
           alignItems: "flex-start",
           bgcolor: theme.palette.background.default,
-          p: "5em 0em",
+          p: "4em 0em",
+          [theme.breakpoints.up('md')]:{
+            p:'6em 0em'
+           }
+
         })}
      id="About" >
         <FlexComponent>
@@ -30,42 +36,42 @@ function AboutSection() {
         >
           <Box
             width={"100%"}
-            pl={"20%"}
+            pl={"1%"}
             sx={(theme) => ({
-              [theme.breakpoints.down("sm")]: {
-                width:'25rem',
-                pl: "2%",
-                m:'-10%',
-                display:'flex',
-                flexDirection:'column',
-                justifyContent:'center',
-                alignItems:'center'
-              },
+              display:'flex',
+              flexDirection:'column',
+              justifyContent:'center',
+              alignItems:'center',
+              [theme.breakpoints.up('md')]:{
+               pl:'22%',
+               display:'block'
+              }
             })}
           >
             <Typography
-              variant={isXs ? "h5" : isSm ? "h5" : "h4"}
+             variant={isXs ? "h5" : isSm ? "h5" : "h4"}
               fontWeight={600}
-              style={{ lineHeight: "1.5" }}
+              style={{ lineHeight: "1.5"}}
             >
-              Hii, I am
+              {aboutData.title1}
             </Typography>
             <Typography
-              variant={isXs ? "h5" : isSm ? "h5" : "h4"}
+               variant={isXs ? "h5" : isSm ? "h5" : "h4"}
               fontWeight={600}
+
             >
-              Shahid Raza
+             {aboutData.name}
             </Typography>
             <Typography
-              variant={isXs ? "h6" : isSm ? "h5" : "h4"}
+              variant={isXs ? "h6" : isSm ? "h6" : "h4"}
               sx={{ display: "flex" }}
               style={{ lineHeight: "1.5" }}
             >
-              <span style={{  fontWeight: "600" }}>I am a &nbsp; </span>
+              <span style={{  fontWeight: "600" }}>{aboutData.title2} &nbsp; </span>
               <span style={{ color: darkTheme.primary, fontWeight: "600" }}>
                 <Typewriter
                   options={{
-                    strings: "Full Stack Developer.",
+                    strings: aboutData.role,
                     autoStart: true,
                     loop: true,
                   }}
@@ -73,16 +79,9 @@ function AboutSection() {
               </span>
             </Typography>
             <Box sx={theme=>({m:'1rem 0.1rem', fontSize:'20px',lineHeight:'32px',width:'80%',fontFamily:theme.typography.main,color:`${darkTheme.text_secondary}`,opacity:'0.8' ,
-                   [theme.breakpoints.down('xs')]:{
-                    m:"10px 10px"
-             }
           })} >
-              I am a motivated and adaptable individual, always seeking new
-              challenges. With a strong passion for learning, I am committed to
-              delivering high-quality results with a positive attitude and a
-              growth mindset. I am prepared to make a meaningful contribution
-              and strive for excellence in all endeavors.
-            </Box>
+             {aboutData.summary}
+             </Box>
           </Box>
         </Stack>
         <FlexComponent
@@ -98,35 +97,42 @@ function AboutSection() {
             }}
           />
         </FlexComponent>
+        
       </FlexComponent>
       <Stack sx={theme=>({
-        width:"20%",
-        justifyContent:'space-evenly',
-        margin:'1px 11rem',
-        [theme.breakpoints.down('sm')]:{
-          width:"100%",
-          justifyContent:'center',
-          alignItems:'center',
-            ml:'10px',
-          },
+        [theme.breakpoints.up('md')]:{
+          justifyContent:'space-evenly',
+          width:"20%",
+          margin:'1px 11rem',
+        }
         })}>
         <AnchorTag href="https://ninjasfiles.s3.amazonaws.com/full-stack%20(2).pdf_2ce6db872ab91637c289fc7cb55e5353/full-stack%20(2).pdf" target="_blank"> 
-      <Button variant="contained" endIcon={<Download/>} disableElevation sx={theme=>({
-              width:'18rem',
+        <Button variant="contained" endIcon={<Download/>} disableElevation sx={theme=>({
+              mt:'0.5rem',
+              width:"15rem",
+              ml:'3.5rem',
               height:'3.5rem',
               borderRadius:'15px',
-              fontWeight:'600',
-              fontFamily:theme.typography.button,
-              fontSize:'20px',
-              textTransform:'capitalize',
-              ml:'5px',
-              mt:'20px',
-              [theme.breakpoints.down('sm')]:{
-                mt:'2rem',
-                width:"15rem",
+              fontSize:"17px",
+                fontWeight:'600',
+                fontFamily:theme.typography.button,
+              [theme.breakpoints.up('md')]:{
+                ml:'2rem',
+                mt:'20px',
+                width:'18rem',
+                height:'3.5rem',
+                borderRadius:'15px',
+                fontWeight:'600',
+                fontFamily:theme.typography.button,
+                fontSize:'20px',
+                textTransform:'capitalize',
+                "&:active":{
+                  fontSize:'21px',
+                  transitionBehavior:'smooth'
+                }
               },
               "&:active":{
-                fontSize:'21px',
+                fontSize:'18px',
                 transitionBehavior:'smooth'
               }
       })}>

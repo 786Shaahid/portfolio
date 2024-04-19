@@ -1,0 +1,349 @@
+{
+    "myInfo": {
+        "name": "Shahid Raza",
+        "title1": "Hii, I am",
+        "title2": " I am a ",
+        "role" : "Full Stack Developer.",
+        "email": "shahidraza02qwert@gmail.com",
+        "phone": "+91 6205807255",
+        "summary": " I am a motivated and adaptable individual, always seeking new challenges. With a strong passion for learning, I am committed to delivering high-quality results with a positive attitude and a growth mindset. I am prepared to make a meaningful contribution and strive for excellence in all endeavors.",
+            "linkedin": "https://www.linkedin.com/in/developers-shahid/",
+            "resume": "https://ninjasfiles.s3.amazonaws.com/full-stack%20(2).pdf_2ce6db872ab91637c289fc7cb55e5353/full-stack%20(2).pdf",
+            "myPic": "../image/myPic.jpg"
+    },
+    "navItem": {
+        "itemIcon": "DiCssdeck",
+        "itemName": "Portfolio",
+        "gitIcon": "GitHub",
+        "text":"Github Profile",
+        "github": "https://github.com/786Shaahid",
+        "navLink": [
+            "About",
+            "Skills",
+            "Projects",
+            "Education",
+            "Contact"
+        ]
+    },
+    "mySkill": {
+        "title": "Skills",
+        "description": "Technical Proficiencies and Abilities",
+        "skills": [
+            {
+                "skill": "Frontend",
+                "technology": [
+                    {
+                        "name": "React Js",
+                        "icon": "FaReact"
+                    },
+                    {
+                        "name": "Redux ",
+                        "icon": "SiRedux"
+                    },
+                    {
+                        "name": "Redux Toolkit",
+                        "icon": "SiRedux"
+                    },
+                    {
+                        "name": "HTML",
+                        "icon": "FaHtml5"
+                    },
+                    {
+                        "name": "CSS",
+                        "icon": "BiLogoCss3"
+                    },
+                    {
+                        "name": "Javascript",
+                        "icon": "SiJavascript"
+                    },
+                    {
+                        "name": "Bootstrap",
+                        "icon": "FaBootstrap"
+                    },
+                    {
+                        "name": "Material-UI",
+                        "icon": "SiMui"
+                    }
+                ]
+            },
+            {
+                "skill": "Backend",
+                "technology": [
+                    {
+                        "name": "Node.js",
+                        "icon": "DiNodejs"
+                    },
+                    {
+                        "name": "Express.js",
+                        "icon": "SiExpress"
+                    },
+                    {
+                        "name": "MongoDB",
+                        "icon": "SiMongodb"
+                    },
+                    {
+                        "name": "JSON Web Token",
+                        "icon": "FaKey"
+                    },
+                    {
+                        "name": "Social Authentication",
+                        "icon": "FaUserFriends"
+                    }
+                ]
+            },
+            {
+                "skill": " Controls",
+                "technology": [
+                    {
+                        "name": "Render",
+                        "icon": "SiRender"
+                    },
+                    {
+                        "name": "Netlify",
+                        "icon": "SiNetlify"
+                    },
+                    {
+                        "name": "VS Code",
+                        "icon": "TbBrandVscode"
+                    }
+                ]
+            },
+            {
+                "skill": "Version Controls",
+                "technology": [
+                    {
+                        "name": "Git",
+                        "icon": "FaGithub"
+                    },
+                    {
+                        "name": "Github",
+                        "icon": "FaGitAlt"
+                    },
+                    {
+                        "name": "API Testing: Postman",
+                        "icon": "SiPostman"
+                    },
+                    {
+                        "name": "Socket.io",
+                        "icon": "SiSocketdotio"
+                    }
+                ]
+            }
+        ]
+    },
+    "myProjects":{
+        "title":"Projects",
+        "description":"I have worked on various project using these technology. Here are some of my project",
+        "projucts": [
+            {
+                "img": "../image/Connectify.jpg",
+                "techUse": [
+                    "React Js",
+                    " Redux Toolkit",
+                    "Node Js",
+                    "Express Js",
+                    "Socket IO",
+                    "MongoDB",
+                    "Nodemailer",
+                    "JWT"
+                ],
+                "name": "Connectify Website",
+                "description": "Built Connectify using MERN for a user-friendly social platform. Enhanced features for seamless connections and real-time communication. Empowered meaningful interactions.",
+                "action": [
+                    {
+                        "liveUrl": "https://connectify-website.netlify.app",
+                        "iconUrl": "OnlinePrediction",
+                        "text":"Go Live"
+                    },
+                    {
+                        "gitUrl": "https://github.com/786Shaahid/authFrontend",
+                        "gitIcon": "GitHub",
+                        "text":"Github"
+                    }
+                ]
+            },
+            {
+                "img": "../image/portfolio.jpg",
+                "techUse": [
+                    "React Js",
+                    "Material-UI"
+                ],
+                "name": "My Portfolio",
+                "description": "I developed a portfolio to exhibit my expertise and showcase various projects I've undertaken, all based on MERN stack technology. Feel free to explore and download my resume, access my GitHub link, and review my educational background",
+                "action": [
+                    {
+                        "liveUrl": "https://shahidrazaportfolio.netlify.app/",
+                        "iconUrl": "OnlinePrediction",
+                        "text":"Go Live"
+                    },
+                    {
+                        "gitUrl": "https://github.com/786Shaahid/portfolio",
+                        "gitIcon": "GitHub",
+                        "text":"Github"
+                    }
+                ]
+            },
+            {
+                "img": "../image/placementCell.jpg",
+                "techUse": [
+                    "Node Js",
+                    "Express Js",
+                    "MongoDB",
+                    "Ejs",
+                    "Export to csv",
+                    "JWT"
+                ],
+                "name": "Placement Cell",
+                "description": "Simplifies student placement processes, facilitating job applications, interview scheduling, and feedback. With strong security and data insights, it enhances efficiency for educational institutions.",
+                "action": [
+                    {
+                        "liveUrl": "https://placement-cell-u2c4.onrender.com",
+                        "iconUrl": "OnlinePrediction",
+                        "text":"Go Live"
+                    },
+                    {
+                        "gitUrl": "https://github.com/786Shaahid/placement-cell",
+                        "gitIcon": "GitHub",
+                        "text":"Github"
+                    }
+                ]
+            },
+            {
+                "img": "../image/googleAuthentication.jpg",
+                "techUse": [
+                    "Node Js",
+                    "Express Js",
+                    "Socket IO",
+                    "MongoDB",
+                    "Nodemailer",
+                    "OAuth 2"
+                ],
+                "name": " Authentication & Forget Password",
+                "description": "Developing Node.js app with Google authentication and Nodemailer for password recovery. It ensures secure login and simplifies password reset, prioritizing user security .",
+                "action": [
+                    {
+                        "liveUrl": "https://forget-password-zbxo.onrender.com",
+                        "iconUrl": "OnlinePrediction",
+                        "text":"Go Live"
+                    },
+                    {
+                        "gitUrl": "https://github.com/786Shaahid/authenticationForgetpassword",
+                        "gitIcon": "GitHub",
+                        "text":"Github"
+                    }
+                ]
+            },
+            {
+                "img": "../image/favouriteMeals.jpg",
+                "techUse": [
+                      "Javascript",
+                      "CSS",
+                      "HTML",
+                      "REST API"
+                ],
+                "name": "Favourite Meal",
+                "description": "Discover and explore meals effortlessly with the 'Find/Search Meal' project. It empowers users to dynamically search, filter, and access detailed recipe information.",
+                "action": [
+                    {
+                        "liveUrl": "https://786shaahid.github.io/favouritemealsapp/index.html",
+                        "iconUrl": "OnlinePrediction",
+                        "text":"Go Live"
+                    },
+                    {
+                        "gitUrl": "https://github.com/786Shaahid/favouritemealsapp",
+                        "gitIcon": "GitHub",
+                        "text":"Github"
+                    }
+                ]
+            },
+            {
+                "img": "../image/alarm.jpg",
+                "techUse": [
+                    "Javascript",
+                      "CSS",
+                      "HTML",
+                      "Local Storage"
+                ],
+                "name": " My Alarm",
+                "description": "Allowing users to set and manage alarms seamlessly. It demonstrates my JavaScript skills and commitment to practical applications.",
+                "action": [
+                    {
+                        "liveUrl": "https://786shaahid.github.io/digitalalarm/",
+                        "iconUrl": "OnlinePrediction",
+                        "text":"Go Live"
+                    },
+                    {
+                        "gitUrl": "https://github.com/786Shaahid/digitalalarm",
+                        "gitIcon": "GitHub",
+                        "text":"Github"
+                    }
+                ]
+            },
+            {
+                "img": "../image/contactList.jpg",
+                "techUse": [
+                    "React Js",
+                    "CSS",
+                    "Rest APIs"
+                ],
+                "name": "Contact-List",
+                "description": "Users can seamlessly add, update, or delete contacts within the list. Utilizing props for efficient data transfer between components.",
+                "action": [
+                    {
+                        "liveUrl": "https://786contactlist.netlify.app/",
+                        "iconUrl": "OnlinePrediction",
+                        "text":"Go Live"
+                    },
+                    {
+                        "gitUrl": "https://github.com/786Shaahid/contact-lists",
+                        "gitIcon": "GitHub",
+                        "text":"Github"
+                    }
+                ]
+            }
+        ]
+    },
+    "eductions":{
+        "title":"Education",
+        "description":"My education has been a journey of self-discovery and growth.My educational details are as follows.",
+          "education":[
+            {
+                "id": 0,
+                "img": "../image/universityLogo.jpg",
+                "school": "Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal",
+                "date": "Aug 2016 - Aug 2020",
+                "grade": "CGPA- 8.39",
+                "desc": "I have completed Bachelor's degree in Mechanical Engineering from RGPV University, Bhopal with CGPA of 8.39.",
+                "degree": "Bachelor of Engineering - BE, Mechanical Engineering"
+              },
+              {
+                "id": 1,
+                "img": "../image/schoolLogo.jpg",
+                "school": "L N College, Bhagwanpur",
+                "date": "Jun 2013 - April 2015",
+                "grade": "Percentage- 68.8%",
+                "desc": "I have completed my class 12 at L N College, Bhagwanpur, where I studied Science with Mathematics.",
+                "degree": "ISC(XII), Science with Mathematics"
+              },
+              {
+                "id": 2,
+                "img": "../image/schoolLogo.jpg",
+                "school": "S D N High School, Purantand",
+                "date": "Apr 2012 - Jun 2013",
+                "grade": "Percentage- 74.6%",
+                "desc": "I have completed my class 10 education at S D N High School, Purantand.",
+                "degree": "BSEB(X)"
+              }
+          ]
+    },
+    "contact":{
+        "title":"Contact Me",
+        "description":"After reviewing my portfolio, please don't hesitate to contact me regarding your future projects. I look forward to hearing from you.",
+        "contactData":[
+            {"icon":"LinkedIn" ,"info":"MyLinkedIn Profile"},
+            {"icon":"Phone" ,"info":" +91 6205807255"},
+            {"icon":"Email" ,"info":"shahidraza02qwert@gmail.com"}
+        ],
+        "subHeading":"Reach Out and Connect"
+    }
+}

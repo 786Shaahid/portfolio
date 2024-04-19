@@ -9,9 +9,7 @@ function EductionSection() {
   return (
     <>
       <FlexComponent
-      sx={(theme) => ({ backgroundColor: darkTheme.bg, [theme.breakpoints.down('sm')]:{
-        width:"25.2rem",
- }
+      sx={(theme) => ({ backgroundColor: darkTheme.bg
  })}
       flexDirection={"column"}
       id='Education' >
@@ -23,19 +21,12 @@ function EductionSection() {
             title={"Education"}
             titleDes={"My education has been a journey of self-discovery and growth.My educational details are as follows."} />
         </FlexComponent>
-      
-    <Timeline sx={theme=>({
-           [theme.breakpoints.down('sm')]:{
-          //  width:'30rem'
-     }
-    })}>
+    <Timeline >
    {
     education.map((eduItem,index)=>(<TimeLineItem item={eduItem} key={index} />))
    } 
     </Timeline>
       </FlexComponent>
-      
-      
     </>
   )
 }

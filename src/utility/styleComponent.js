@@ -29,7 +29,7 @@ export const FlexComponent = styled(Box)(({ theme, padding,width,height }) => ({
     fontFamily: theme.typography.subHeading,
     border: `2px solid ${darkTheme.button}`,
     borderRadius: "20px",
-    padding: "10px 5px",
+    // padding: "10px 5px",
     minHeight: "18rem",
   }));
 
@@ -45,7 +45,7 @@ export const FlexComponent = styled(Box)(({ theme, padding,width,height }) => ({
     // minWidth:'30%',
     
     border: `2px solid ${darkTheme.button}`,
-    padding: "0.5rem 1rem",
+    // padding: "0.5rem 1rem",
     color: theme.palette.text.primary,
     fontFamily: theme.typography.title,
     fontWeight: "400",

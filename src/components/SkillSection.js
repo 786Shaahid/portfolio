@@ -8,9 +8,9 @@ import {
 import { Box, Grid, Typography } from "@mui/material";
 import { Title } from "../utility/reusableComponent";
 import { darkTheme } from "../utility/Themes";
-import { FaReact } from "react-icons/fa6";
+import { FaKey, FaReact } from "react-icons/fa6";
 import { SiRedux } from "react-icons/si";
-import { FaHtml5 } from "react-icons/fa";
+import { FaHtml5, FaUserFriends } from "react-icons/fa";
 import { BiLogoCss3 } from "react-icons/bi";
 import { SiJavascript } from "react-icons/si";
 import { SiMui } from "react-icons/si";
@@ -29,10 +29,11 @@ import { TbBrandVscode } from "react-icons/tb";
 function SkillSection() {
   return (
     <>
-      <FlexComponent bgcolor={darkTheme.bg} flexDirection={"column"} id="Skill" sx={theme=>({
-         [theme.breakpoints.down('sm')]:{
-          width:"25.8rem",
-   }
+      <FlexComponent bgcolor={darkTheme.bg} flexDirection={"column"} id="Skills" sx={theme=>({
+  //       // width:"25.8rem",
+  //        [theme.breakpoints.up('md')]:{
+  //         width:'full'
+  //  } 
       })}>
         <FlexComponent
           m={"1rem"}
@@ -46,10 +47,11 @@ function SkillSection() {
           />
         </FlexComponent>
         <Box sx={(theme) => ({ flexGrow: 1 ,
-             [theme.breakpoints.down('sm')]:{
-                      width:'90%'
+               width:"90%",
+               [theme.breakpoints.up('md')]:{
+               width:"70%",
              }
-        })} width={"70%"}>
+        })}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
               <ItemBox>
@@ -91,8 +93,8 @@ function SkillSection() {
                   <CustomButton startIcon={<SiMongodb />}>MongoDB</CustomButton>
                 </GroupButton>
                 <GroupButton direction={"row"} spacing={2}>
-                  <CustomButton>Jsonweb Token</CustomButton>
-                  <CustomButton>Social Authentication</CustomButton>
+                  <CustomButton startIcon={<FaKey/>}>Jsonweb Token</CustomButton>
+                  <CustomButton startIcon={<FaUserFriends/>}>Social Authentication</CustomButton>
                 </GroupButton>
               </ItemBox>
             </Grid>
@@ -127,7 +129,6 @@ function SkillSection() {
                     Socket.IO
                   </CustomButton>
                 </GroupButton>
-                <GroupButton direction={"row"} spacing={2}></GroupButton>
               </ItemBox>
             </Grid>
           </Grid>

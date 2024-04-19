@@ -1,22 +1,22 @@
-import { GitHub, MenuOpen } from "@mui/icons-material";
+import {  MenuOpen } from "@mui/icons-material";
 import {
   AppBar,
   Button,
   IconButton,
-  
+  Icon ,
   Stack,
   Typography,
   
 } from "@mui/material";
 import React from "react";
 import { darkTheme } from "../utility/Themes";
-import { DiCssdeck } from "react-icons/di";
 import { AnchorTag, FlexComponent, Navlink } from "../utility/styleComponent";
 import { red } from "@mui/material/colors";
 import { Link } from "react-scroll";
+import { IconsData } from "../data/iconData";
 
-function Navbar({toggledrawer}) {
-
+function Navbar({toggledrawer,navData}) {
+      
   return (
     <AppBar
       position="sticky"
@@ -24,18 +24,16 @@ function Navbar({toggledrawer}) {
         backgroundColor: theme.palette.background.default,
         boxShadow:'none',
         borderRight:`1px solid ${red[200]}` ,
-        [theme.breakpoints.down('sm')]:{
-          width:'25.8rem',
-        }
+        
       })}
     >
       <FlexComponent justifyContent={'center'} padding={"0.5rem"}>
-        <Stack direction={"row"} spacing={12}>
+        <Stack direction={"row"} spacing={11}>
           <Stack flex={2} sx={{justifyContent:'center',alignItems:"center",cursor:"default"}}>
             <FlexComponent sx={{ justifyContent: { sm: "end", xs: "start" } }}>
-              <DiCssdeck size={40} />
-              <Typography variant="h7" sx={{ ml: "8px" , fontWeight:'550',}}>
-                Portfolio
+              <Icon component={IconsData[navData.itemIcon]} style={{ fontSize: 40 }}/>
+              <Typography variant="h7" sx={{ ml: "1px" , fontWeight:'550',}}>
+                {navData.itemName}
               </Typography>
             </FlexComponent>
           </Stack>
@@ -52,23 +50,24 @@ function Navbar({toggledrawer}) {
             }}
             flex={6}
           >
-            <Navlink><Link duration={500}  smooth={true} to="About">About</Link></Navlink>
-            <Navlink><Link duration={500} smooth={true} to="Skill">Skills</Link></Navlink>
-            <Navlink><Link duration={500} smooth={true} to="Projects" >Projects</Link></Navlink>
-            <Navlink><Link duration={500} smooth={true} to='Education'  >Education</Link></Navlink>
-            <Navlink><Link duration={500} smooth={true} to='Contact' >Contact</Link></Navlink>
+            {
+              navData.navLink.map((item,index)=>(
+                <>
+                <Navlink key={index}><Link duration={500} smooth={true} to={item}>{item}</Link></Navlink>
+                </>
+              ))
+            }
           </Stack>
 
           <Stack flex={2} justifyContent={"center"} alignItems={"center"}>
             <Button
               variant="outlined"
-              startIcon={<GitHub />}
+              startIcon={<Icon  component={IconsData[navData.gitIcon]} />}
               sx={(theme) => ({
                 textTransform: "capitalize",
                 display: { xs: "none", sm: "flex" },
                 borderRadius: "20px",
                 border: `2px solid ${darkTheme.button}`,
-                // flexWrap: "nowrap",
                 width: "11rem",
                 fontWeight: "550",
                 "&:hover":{
@@ -77,9 +76,8 @@ function Navbar({toggledrawer}) {
                 }
               })}
             >
-             <AnchorTag href="https://github.com/786Shaahid" target="_blank" sx={theme=>({color:darkTheme.button})}>
-
-              Github Profile
+             <AnchorTag href={navData.github} target="_blank" sx={theme=>({color:darkTheme.button})}>
+              {navData.text}
              </AnchorTag>
             </Button>
           </Stack>

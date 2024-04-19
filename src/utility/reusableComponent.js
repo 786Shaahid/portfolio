@@ -32,10 +32,14 @@ export const TimeLineItem=({item})=>{
 return (
     <>
       {/* <Timeline > */}
-      <TimelineItem sx={{marginBottom:'15px'}} key={item.id}>
+      <TimelineItem sx={{marginBottom:'15px',
+         "&::before": {
+          content: "none", 
+        }
+    }} key={item.id}>
       <TimelineSeparator >
-          <TimelineDot sx={{bgcolor:darkTheme.button,outline:`3px solid ${darkTheme.button}`,outlineOffset:'3px'}}/>
-          <TimelineConnector sx={{bgcolor:darkTheme.button,width:'4px'}}/>
+          <TimelineDot sx={{bgcolor:darkTheme.button,outline:`2px solid ${darkTheme.button}`,outlineOffset:'1px'}}/>
+          <TimelineConnector sx={{bgcolor:darkTheme.button,width:'3px'}}/>
         </TimelineSeparator>
         <TimelineContent><EductionCard education={item}/></TimelineContent>
       </TimelineItem>

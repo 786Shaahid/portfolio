@@ -40,9 +40,6 @@ function ContactSection() {
       <FlexComponent
         sx={(theme) => ({
           backgroundColor: theme.palette.background.default,
-          [theme.breakpoints.down('sm')]:{
-            width:"25.8rem",
-     }
         })}
         flexDirection={"column"}
         id="Contact"
@@ -60,28 +57,20 @@ function ContactSection() {
           justifyContent={"center"}
           alignItems={"center"}
           direction={{ xs: "column", sm: "row" }}
-          width={"70%"}
           p={1}
           sx={theme=>({ border: "2px solid white",
-          [theme.breakpoints.down('sm')]:{
-            width:"90%",
-            // p:'20px'
-     }
+             width:"96%",
+           [theme.breakpoints.up('md')]:{
+             width:'70%'
+           } 
         })}
         >
           <Stack flex={3} sx={(theme) => ({})}>
-            <Card sx={theme=>({ maxWidth: 345 ,
-            // flexDirection:'column',
-             [theme.breakpoints.down('sm')]:{
-              width:"100%",
-       }
-            })}>
+            <Card sx={{ width:"21rem"}} >
               <CardActionArea sx={theme=>({ height: "20rem", 
-              [theme.breakpoints.down('sm')]:{
-            width:"70%",
-     } })}>
-                <List>
-                  <ListItem>
+      })}>
+                <List sx={{padding:0}}>
+                  <ListItem sx={{padding:0}}>
                     <ListItemButton>
                       <ListItemIcon>
                         <LinkedIn
@@ -103,7 +92,7 @@ function ContactSection() {
                       />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem sx={{padding:0}}>
                     <ListItemButton>
                       <ListItemIcon>
                         <Phone
@@ -122,7 +111,7 @@ function ContactSection() {
                       />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem sx={{padding:0}}>
                     <ListItemButton>
                       <ListItemIcon>
                         <Email

@@ -29,3 +29,4 @@ export const education = [
     degree: "BSEB(X)",
   },
 ];
+
