@@ -38,14 +38,19 @@ function Project() {
         </FlexComponent>
         <CardConatiner
           sx={(theme) => ({
-            flexGrow: 1,
-            [theme.breakpoints.down("sm")]: {
-              width: "93%",
-            },
+            [theme.breakpoints.up('md')]:{
+              borderBottom:'2px solid white',
+              width:'62vw',
+              height:'75vh',
+              overflow:"auto",
+              "&::-webkit-scrollbar":{
+                   display:'none'
+              }
+            }
           })}
-          width={"70%"}
+          width={"98%"}
         >
-          <Grid container spacing={3}>
+          <Grid container spacing={3} sx={{}}>
             <Grid item xs={12} sm={6}>
               <Card
                 sx={{
@@ -164,8 +169,6 @@ function Project() {
                     My Portfolio
                   </Typography>
                   <Typography variant="body2" color={darkTheme.text_secondary}>
-                    {/* I developed  personal portfolio 
-                    to showcase my skills and projects.  */}
                     I developed a  portfolio  to exhibit
                     my expertise and showcase various projects I've undertaken,
                     all based on MERN stack technology. Feel free to explore and
@@ -564,8 +567,8 @@ function Project() {
                 </GroupButton>
               </Card>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              {/* <Card  sx={{padding:'8px' ,bgcolor:'black', minHeight:'31rem',outline:`2px solid ${darkTheme.button}`,borderRadius:'20px'}} >
+            {/* <Grid item xs={12} sm={6}>
+              <Card  sx={{padding:'8px' ,bgcolor:'black', minHeight:'31rem',outline:`2px solid ${darkTheme.button}`,borderRadius:'20px'}} >
       <CardMedia
         component="img"
         alt="chat-pic"
@@ -595,10 +598,10 @@ seamless connections and real-time communication. Empowered meaningful interacti
         <CustomButton  variant='outlined'  startIcon={<OnlinePrediction/>}  >Go Live</CustomButton>
         <CustomButton   variant='outlined'  startIcon={<GitHub/>} > Git</CustomButton>
       </GroupButton>
-                 </Card> */}
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              {/* <Card  sx={{padding:'8px' ,bgcolor:'black', minHeight:'31rem',outline:`2px solid ${darkTheme.button}`,borderRadius:'20px'}} >
+                 </Card>
+            </Grid> */}
+            {/* <Grid item xs={12} sm={6}>
+              <Card  sx={{padding:'8px' ,bgcolor:'black', minHeight:'31rem',outline:`2px solid ${darkTheme.button}`,borderRadius:'20px'}} >
       <CardMedia
         component="img"
         alt="chat-pic"
@@ -628,8 +631,8 @@ seamless connections and real-time communication. Empowered meaningful interacti
         <CustomButton  variant='outlined'  startIcon={<OnlinePrediction/>}  >Go Live</CustomButton>
         <CustomButton   variant='outlined'  startIcon={<GitHub/>} > Git</CustomButton>
       </GroupButton>
-                 </Card> */}
-            </Grid>
+                 </Card>
+            </Grid> */}
           </Grid>
         </CardConatiner>
       </FlexComponent>
