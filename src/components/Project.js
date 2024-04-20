@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   AnchorTag,
   CardConatiner,
@@ -7,11 +7,23 @@ import {
   GroupButton,
 } from "../utility/styleComponent";
 import { Title } from "../utility/reusableComponent";
-import { Card, CardContent, CardMedia, Grid, Icon, Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, Grid, Icon, TextField, Typography } from "@mui/material";
 import { darkTheme } from "../utility/Themes";
 import { IconsData } from "../data/iconData";
 
 function Project({projects}) {
+  const [filterValue, setFilterValue] = useState("");
+
+  const filterProjects = (value) => {
+    if (!value) {
+      return projects.MyProjects;
+    }
+    return projects.MyProjects.filter(project => project.techUse.some(tech => tech.toLowerCase().includes(value.toLowerCase())));
+  };
+useEffect(()=>{
+ const res= filterProjects(filterValue);
+ console.log(res);
+},[filterValue])
   return (
     <>
       <FlexComponent
@@ -25,6 +37,12 @@ function Project({projects}) {
           <Title
             title={projects.title}
             titleDes={projects.description}
+          />
+           <TextField
+            label="Filter by Technology"
+            variant="outlined"
+            value={filterValue}
+            onChange={(e) => setFilterValue(e.target.value)}
           />
         </FlexComponent>
         <CardConatiner
@@ -43,7 +61,7 @@ function Project({projects}) {
         >
           <Grid container spacing={3} sx={{}}>
             {
-              projects.MyProjects.map((project,index)=>(<>
+              filterProjects(filterValue).map((project,index)=>(<>
                 <Grid item xs={12} sm={6} key={index}>
               <Card
                 sx={{
