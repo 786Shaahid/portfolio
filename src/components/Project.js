@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import {
   AnchorTag,
   CardConatiner,
@@ -20,10 +20,7 @@ function Project({projects}) {
     }
     return projects.MyProjects.filter(project => project.techUse.some(tech => tech.toLowerCase().includes(value.toLowerCase())));
   };
-useEffect(()=>{
- const res= filterProjects(filterValue);
- console.log(res);
-},[filterValue])
+
   return (
     <>
       <FlexComponent
