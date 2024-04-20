@@ -4,14 +4,14 @@ import { BiLogoCss3 } from "react-icons/bi";
 import { SiRedux, SiMui, SiMongodb, SiExpress, SiPostman, SiSocketdotio, SiRender, SiNetlify ,SiJavascript} from "react-icons/si";
 import { DiNodejs,DiCssdeck } from "react-icons/di";
 import { TbBrandVscode } from "react-icons/tb";
-import { ArrowUpwardSharp, Email, LinkedIn, Phone } from "@mui/icons-material";
+import { ArrowUpwardSharp, Email, LinkedIn, Phone,OnlinePrediction } from "@mui/icons-material";
 export const IconsData = {
-  "Node.js": DiNodejs,
-  "Express.js": SiExpress,
+  "Node Js": DiNodejs,
+  "Express Js": SiExpress,
   "MongoDB": SiMongodb,
   "JSON Web Token": FaKey,
   "Social Authentication": FaUserFriends,
-  "React": FaReact,
+  "React Js": FaReact,
   "Redux": SiRedux,
   "Redux Toolkit": SiRedux,
   "HTML": FaHtml5,
@@ -21,19 +21,20 @@ export const IconsData = {
   "Material-UI": SiMui,
   "Git": FaGitAlt,
   "GitHub": FaGithub,
-  "Postman": SiPostman,
+  "API Testing: Postman": SiPostman,
   "Socket.io": SiSocketdotio,
   "Render": SiRender,
   "Netlify": SiNetlify,
   "VS Code": TbBrandVscode,
-  "DiCssdeck":DiCssdeck
-};
-
-export const MuiIcon={
+  "DiCssdeck":DiCssdeck,
+   "OnlinePrediction":OnlinePrediction,
    "Email":Email,
    "LinkedIn":LinkedIn,
    "Phone":Phone,
    "ArrowUpwardSharp":ArrowUpwardSharp
-}
+};
+
+// export const MuiIcon={
+// }
 
 

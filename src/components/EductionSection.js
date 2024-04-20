@@ -3,9 +3,8 @@ import {  FlexComponent } from '../utility/styleComponent';
 import {  TimeLineItem, Title } from '../utility/reusableComponent';
 import { darkTheme } from '../utility/Themes';
 import Timeline from '@mui/lab/Timeline';
-import { education } from '../data/data';
 
-function EductionSection() {
+function EductionSection({educations}) {
   return (
     <>
       <FlexComponent
@@ -18,12 +17,12 @@ function EductionSection() {
           flexDirection={"column"}
         >
           <Title
-            title={"Education"}
-            titleDes={"My education has been a journey of self-discovery and growth.My educational details are as follows."} />
+            title={educations.title}
+            titleDes={educations.description} />
         </FlexComponent>
     <Timeline >
    {
-    education.map((eduItem,index)=>(<TimeLineItem item={eduItem} key={index} />))
+    educations.education.map((eduItem,index)=>(<TimeLineItem item={eduItem} key={index} />))
    } 
     </Timeline>
       </FlexComponent>

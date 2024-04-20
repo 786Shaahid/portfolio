@@ -29,9 +29,9 @@ function App() {
   <Navbar toggledrawer={toggledrawer} navData={storeData.navItem}/>
   <AboutSection  aboutData={storeData.myInfo} />
   <SkillSection  skillData={storeData.mySkill} />
-  <Project    projects={storeData.projects} />
-  <EductionSection  education={storeData.eductions} />
-  <ContactSection   />
+  <Project    projects={storeData.myProjects} />
+  <EductionSection  educations={storeData.eductions} />
+  <ContactSection contactInfo={storeData.contact}  />
   
 
    </Stack>

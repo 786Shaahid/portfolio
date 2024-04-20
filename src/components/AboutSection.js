@@ -3,13 +3,12 @@ import React from "react";
 import { AnchorTag, FlexComponent } from "../utility/styleComponent";
 import Typewriter from "typewriter-effect";
 import { darkTheme} from "../utility/Themes";
-import myPic from "../image/myPic.jpg";
 import { Download } from "@mui/icons-material";
 
 function AboutSection({aboutData}) {
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
   const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
-//  const myPic=aboutData.myPic;
+ const myPic=aboutData.myPic;
 //  console.log(myPic);
   
  return (

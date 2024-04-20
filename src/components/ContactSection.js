@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  AnchorTag,
   CustomButton,
   CustomTextField,
   FlexComponent,
@@ -12,6 +11,7 @@ import {
   Card,
   CardActionArea,
   CircularProgress,
+  Icon,
   List,
   ListItem,
   ListItemButton,
@@ -20,13 +20,12 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { ArrowUpwardSharp, Email, LinkedIn, Phone } from "@mui/icons-material";
+import { ArrowUpwardSharp } from "@mui/icons-material";
 import { lightBlue } from "@mui/material/colors";
 import { Link } from "react-scroll";
+import { IconsData } from "../data/iconData";
 
-function ContactSection() {
-
-
+function ContactSection({contactInfo}) {
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
     setOpen(false);
@@ -46,10 +45,8 @@ function ContactSection() {
       >
         <FlexComponent m={"1rem"} flexDirection={"column"}>
           <Title
-            title={"Contact Me"}
-            titleDes={
-              "After reviewing my portfolio, please don't hesitate to contact me regarding your future projects. I look forward to hearing from you."
-            }
+            title={contactInfo.title}
+            titleDes={contactInfo.description}
           />
         </FlexComponent>
         <Stack
@@ -69,11 +66,14 @@ function ContactSection() {
             <Card sx={{ width:"21rem"}} >
               <CardActionArea sx={theme=>({ height: "20rem", 
       })}>
-                <List sx={{padding:0}}>
+        <List sx={{padding:0}}>
+        {
+          contactInfo.contactData.map((contact,index)=>(<>
                   <ListItem sx={{padding:0}}>
                     <ListItemButton>
                       <ListItemIcon>
-                        <LinkedIn
+                        <Icon 
+                        component={IconsData[contact.icon]}
                           sx={(theme) => ({
                             fontSize: "30px",
                             color: "white",
@@ -82,55 +82,17 @@ function ContactSection() {
                       </ListItemIcon>
                       <ListItemText
                         primary={
-                          <AnchorTag
-                            href="https://www.linkedin.com/in/developers-shahid/"
-                            target="_blank"
-                          >
-                            MyLinkedIn Profile
-                          </AnchorTag>
+                           <Typography sx={{fontWeight:'550'}}>
+                            {contact.info}
+                          </Typography>
                         }
                       />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem sx={{padding:0}}>
-                    <ListItemButton>
-                      <ListItemIcon>
-                        <Phone
-                          sx={(theme) => ({
-                            fontSize: "30px",
-                            color: "white",
-                          })}
-                        />
-                      </ListItemIcon>
-                      <ListItemText
-                        primary={
-                          <AnchorTag href="#" target="_blank">
-                            +91 6205807255
-                          </AnchorTag>
-                        }
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem sx={{padding:0}}>
-                    <ListItemButton>
-                      <ListItemIcon>
-                        <Email
-                          sx={(theme) => ({
-                            fontSize: "30px",
-                            color: "white",
-                          })}
-                        />
-                      </ListItemIcon>
-                      <ListItemText
-                        primary={
-                          <AnchorTag href="" target="_blank">
-                            shahidraza02qwert@gmail.com
-                          </AnchorTag>
-                        }
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                </List>
+          </>))
+
+}
+</List>
               </CardActionArea>
             </Card>
           </Stack>
@@ -142,7 +104,7 @@ function ContactSection() {
                 sx={{ textDecoration: "underline" }}
                 gutterBottom
               >
-                Reach Out and Connect
+               {contactInfo.subHeading}
               </Typography>
             </Stack>
             <Stack>
@@ -184,7 +146,8 @@ function ContactSection() {
             </Stack>
           </Stack>
         </Stack>
-       
+
+        {/* BOTTOM NEGIVATATION  */}
        <Stack sx={{
            width:'80px',
            height:'80px',
