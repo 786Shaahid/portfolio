@@ -36,10 +36,20 @@ function Project({projects}) {
             titleDes={projects.description}
           />
            <TextField
-            label="Filter by Technology"
+            label="Search by Technology"
             variant="outlined"
             value={filterValue}
             onChange={(e) => setFilterValue(e.target.value)}
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                  borderColor: 'white'
+                },
+                '&:hover fieldset': {
+                  borderColor: 'blue',
+                },
+              },
+            }}
           />
         </FlexComponent>
         <CardConatiner

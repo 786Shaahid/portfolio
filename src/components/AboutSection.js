@@ -4,13 +4,13 @@ import { AnchorTag, FlexComponent } from "../utility/styleComponent";
 import Typewriter from "typewriter-effect";
 import { darkTheme} from "../utility/Themes";
 import { Download } from "@mui/icons-material";
-
+// import myPic from '../image/myPic.jpg'
 function AboutSection({aboutData}) {
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
   const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
- const myPic=aboutData.myPic;
+//  const myPic=aboutData.myPic;
 //  console.log(myPic);
-  
+    
  return (
     <>
       <Stack
@@ -88,7 +88,7 @@ function AboutSection({aboutData}) {
           sx={{ display: { xs: "none", sm: "none", md: " block" } }}
         >
           <Avatar
-            src={myPic}
+            src={`${aboutData.myPic}`}
             alt="Profile-pic"
             sx={{
               width: "15rem",
